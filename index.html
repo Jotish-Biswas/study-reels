@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Reels - Physics, Chemistry & Math Notes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Study Reels</h1>
+            <p class="subtitle">Your Complete Guide to Physics, Chemistry & Mathematics</p>
+        </header>
+
+        <main id="main-content">
+            <!-- Home View -->
+            <div id="home-view" class="view active">
+                <div class="subjects-grid">
+                    <div class="subject-card" onclick="showSubject('Physicss')">
+                        <div class="card-icon">⚛️</div>
+                        <h2>Physics</h2>
+                        <p>Explore the laws of nature</p>
+                    </div>
+                    <div class="subject-card" onclick="showSubject('Chemistry')">
+                        <div class="card-icon">🧪</div>
+                        <h2>Chemistry</h2>
+                        <p>Discover chemical reactions</p>
+                    </div>
+                    <div class="subject-card" onclick="showSubject('Math')">
+                        <div class="card-icon">📐</div>
+                        <h2>Mathematics</h2>
+                        <p>Master mathematical concepts</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subject View (Parts) -->
+            <div id="subject-view" class="view">
+                <button class="back-btn" onclick="showHome()">← Back to Subjects</button>
+                <h2 id="subject-title"></h2>
+                <div id="parts-list" class="parts-grid"></div>
+            </div>
+
+            <!-- Chapter View -->
+            <div id="chapter-view" class="view">
+                <button class="back-btn" onclick="showSubjectParts()">← Back to Parts</button>
+                <h2 id="chapter-title"></h2>
+                <div id="chapters-list" class="chapters-grid"></div>
+            </div>
+
+            <!-- Content View (Markdown Display) -->
+            <div id="content-view" class="view">
+                <button class="back-btn" onclick="showChapters()">← Back to Chapters</button>
+                <div id="markdown-content" class="markdown-body"></div>
+            </div>
+        </main>
+
+        <footer>
+            <p>This is an open source note of Admission by Jotish. Help yourself and help others! 🌟</p>
+        </footer>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="image-modal" onclick="closeImageModal()">
+        <span class="image-modal-close" onclick="closeImageModal()">&times;</span>
+        <img class="image-modal-content" id="modalImage">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
