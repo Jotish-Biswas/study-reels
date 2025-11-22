@@ -10,7 +10,9 @@ function parseMarkdown(markdown) {
             // Extract just the filename and put it in images/ folder
             // This fixes the path regardless of how many ../../ are there
             const filename = url.split('images/')[1];
-            return `<img src="images/${filename}" alt="${alt}">`;
+            // Use absolute path for GitHub Pages compatibility
+            const basePath = window.location.pathname.includes('/study-reels/') ? '/study-reels/' : '/';
+            return `<img src="${basePath}images/${filename}" alt="${alt}">`;
         }
         return `<img src="${url}" alt="${alt}">`;
     });
@@ -193,7 +195,9 @@ async function showContent(fileName, title) {
     contentDiv.innerHTML = '<p>Loading...</p>';
 
     try {
-        const filePath = `${currentState.subject}/${currentState.part}/${fileName}`;
+        // Get base path for GitHub Pages compatibility
+        const basePath = window.location.pathname.includes('/study-reels/') ? '/study-reels/' : '/';
+        const filePath = `${basePath}${currentState.subject}/${currentState.part}/${fileName}`;
         const response = await fetch(filePath);
         
         if (!response.ok) {
