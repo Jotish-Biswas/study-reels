@@ -196,6 +196,15 @@ async function showContent(fileName, title) {
         const html = parseMarkdown(markdown);
         
         contentDiv.innerHTML = `<h1>${title}</h1>${html}`;
+        
+        // Add click handlers to all images for modal view
+        const images = contentDiv.querySelectorAll('img');
+        images.forEach(img => {
+            img.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openImageModal(img.src);
+            });
+        });
     } catch (error) {
         contentDiv.innerHTML = `
             <h2>Error Loading Content</h2>
@@ -205,6 +214,21 @@ async function showContent(fileName, title) {
     }
 
     showView('content-view');
+}
+
+// Image modal functions
+function openImageModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    modal.classList.add('active');
+    modalImg.src = imageSrc;
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+}
+
+function closeImageModal() {
+    const modal = document.getElementById('imageModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restore scrolling
 }
 
 // Back navigation functions
