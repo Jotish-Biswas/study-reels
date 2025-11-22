@@ -1,7 +1,27 @@
-# Organic Chemistry Notes (Chapter 2)
+# Organic Chemistry Notes 
 
 নিচে নোটের ছবিগুলো দেওয়া হলো:
 
 ![Page 1](../../images/1.jpeg)
 ![Page 2](../../images/2.jpeg)
 ![Page 3](../../images/3.jpeg)
+![Page 4](../../images/4.jpeg)
+![Page 5](../../images/5.jpeg)
+![Page 6](../../images/6.jpeg)
+![Page 7](../../images/7.jpeg)
+![Page 8](../../images/8.jpeg)
+![Page 9](../../images/9.jpeg)
+![Page 10](../../images/10.jpeg)
+![Page 11](../../images/11.jpeg)
+![Page 12](../../images/12.jpeg)
+![Page 13](../../images/13.jpeg)
+![Page 14](../../images/14.jpeg)
+![Page 15](../../images/15.jpeg)
+![Page 16](../../images/16.jpeg)
+![Page 17](../../images/17.jpeg)
+![Page 18](../../images/18.jpeg)
+![Page 19](../../images/19.jpeg)
+![Page 20](../../images/20.jpeg)
+![Page 21](../../images/21.jpeg)
+![Page 22](../../images/22.jpeg)
+![Page 23](../../images/23.jpeg)
