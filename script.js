@@ -3,7 +3,17 @@ function parseMarkdown(markdown) {
     let html = markdown;
     
     // Convert images: ![alt](url) to <img>
-    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1">');
+    // SMART FIX: This handles both "../../images/" and "images/" paths automatically
+    html = html.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (match, alt, url) => {
+        // If the link points to an image in the images folder
+        if (url.includes('images/')) {
+            // Extract just the filename and put it in images/ folder
+            // This fixes the path regardless of how many ../../ are there
+            const filename = url.split('images/')[1];
+            return `<img src="images/${filename}" alt="${alt}">`;
+        }
+        return `<img src="${url}" alt="${alt}">`;
+    });
     
     // Convert headers
     html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
