@@ -83,14 +83,14 @@ const chapterFiles = {
         { file: 'CH-1.md', title: 'Chapter 1' }
     ],
     'Chem-2': [
-        { file: 'CH-2 (ORGANIC).md', title: 'Chapter 2 - Organic Chemistry' }
+        { file: 'CH-2-ORGANIC.md', title: 'Chapter 2 - Organic Chemistry' }
     ],
     'Math-1': [
-        { file: 'CH-1 (Matrix).md', title: 'Chapter 1 - Matrix' },
-        { file: 'CH-3 (Straight Line) .md', title: 'Chapter 3 - Straight Line' },
-        { file: 'CH-4 (Circle).md', title: 'Chapter 4 - Circle' },
-        { file: 'CH- 7 (Triogonometry).md', title: 'Chapter 7 - Trigonometry' },
-        { file: 'CH-9 & 10(Calculas).md', title: 'Chapter 9 & 10 - Calculus' }
+        { file: 'CH-1-Matrix.md', title: 'Chapter 1 - Matrix' },
+        { file: 'CH-3-Straight-Line.md', title: 'Chapter 3 - Straight Line' },
+        { file: 'CH-4-Circle.md', title: 'Chapter 4 - Circle' },
+        { file: 'CH-7-Triogonometry.md', title: 'Chapter 7 - Trigonometry' },
+        { file: 'CH-9-10-Calculas.md', title: 'Chapter 9 & 10 - Calculus' }
     ],
     'Math-2': [
         { file: 'CH-3(Complex Number).md', title: 'Chapter 3 - Complex Number' },
